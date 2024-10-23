@@ -12,14 +12,33 @@ const HomePage = () => {
   return (
     <>
       <ScrollProgress />
-      <main className="flex-1">
-        <HeroSection />
-        <FeaturesSection />
-        <TestimonialSection />
-        <PricingPreviewSection />
-        <IntegrationsSection />
-        <FAQSection />
-        <CTASection />
+      <main className="relative flex-1">
+        <section className="overflow-hidden">
+          <HeroSection />
+        </section>
+        <section className="relative section-gradient bg-muted/50">
+          <FeaturesSection />
+        </section>
+        <section className="relative section-gradient bg-muted/50">
+          <TestimonialSection />
+        </section>
+        <section className="relative">
+          <div className="absolute inset-0 -z-10 bg-grid-slate-200/20 mask-radial dark:bg-grid-slate-800/20" />
+          <PricingPreviewSection />
+        </section>
+        <section className="relative section-gradient bg-muted/50">
+          <IntegrationsSection />
+        </section>
+        <section className="relative section-gradient bg-muted/50">
+          <FAQSection />
+        </section>
+        
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10" />
+          </div>
+          <CTASection />
+        </section>
       </main>
     </>
   );
